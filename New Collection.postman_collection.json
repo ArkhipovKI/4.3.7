@@ -1,0 +1,114 @@
+{
+	"info": {
+		"_postman_id": "77e601e9-5b22-478b-b269-e7b3e2bd96d8",
+		"name": "New Collection",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "registartion",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"user\":{\r\n    \"username\": \"Jacks\",\r\n    \"email\": \"jake@jak.jake\",\r\n    \"password\": \"jakejake\"\r\n  }\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://conduit.productionready.io/api/users",
+					"protocol": "https",
+					"host": [
+						"conduit",
+						"productionready",
+						"io"
+					],
+					"path": [
+						"api",
+						"users"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "autification",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "token",
+						"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpZCI6MjAyNjkyLCJ1c2VybmFtZSI6IkphY2tzc2FhIiwiZXhwIjoxNjMzNDk3MjIxfQ.bfU7WF4zdkr91AR3xQK8klbtMdaF3CPGkhbcaLsiy-U",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"user\":{\r\n    \"email\": \"jake@jaksaa.jake\",\r\n    \"password\": \"jakejakeaa\"\r\n  }\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://conduit.productionready.io/api/users/login",
+					"protocol": "https",
+					"host": [
+						"conduit",
+						"productionready",
+						"io"
+					],
+					"path": [
+						"api",
+						"users",
+						"login"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "get User",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Token eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpZCI6MjAyNjcxLCJ1c2VybmFtZSI6IkphY2tzcyIsImV4cCI6MTYzMzQ5NTEwNH0.eKXX4dq4KvCgL4i77I8EXCouj1vIa0kVw8zKlEg3tdk",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "https://conduit.productionready.io/api/user?secret=42",
+					"protocol": "https",
+					"host": [
+						"conduit",
+						"productionready",
+						"io"
+					],
+					"path": [
+						"api",
+						"user"
+					],
+					"query": [
+						{
+							"key": "token",
+							"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpZCI6MjAyNjcxLCJ1c2VybmFtZSI6IkphY2tzcyIsImV4cCI6MTYzMzQ5NTEwNH0.eKXX4dq4KvCgL4i77I8EXCouj1vIa0kVw8zKlEg3tdk",
+							"disabled": true
+						},
+						{
+							"key": "secret",
+							"value": "42"
+						}
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
